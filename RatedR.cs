@@ -2,12 +2,23 @@ using System;
 
 class RatedR
 {
+  static bool checkIfOlderThan17(int age)
+  {
+    if(age >= 17)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }
   static void Main() 
   {
     Console.WriteLine("How old are you?");
     string userAgeString = Console.ReadLine();
     int userAgeNumber = int.Parse(userAgeString);
-    if(userAgeNumber >= 17)
+    if(checkIfOlderThan17(userAgeNumber))
     {
       Console.WriteLine("You are old enough to see this movie");
     }
